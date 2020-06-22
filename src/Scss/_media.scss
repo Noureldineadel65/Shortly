@@ -1,0 +1,78 @@
+@media only screen and (min-width: 765px) {
+	.input {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: center;
+	}
+	.hero {
+		input {
+			width: 65%;
+		}
+		button {
+			margin-top: 0;
+		}
+	}
+	.features {
+		.feature {
+			width: 25%;
+			padding: 0 3rem;
+			margin: 0 !important;
+			&:not(:last-of-type) {
+				border-right: 1px solid gray;
+			}
+		}
+	}
+	footer .footer-items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		align-items: center;
+		grid-gap: 2rem;
+	}
+	footer .footer-items > li:not(:last-of-type) {
+		margin-bottom: 0rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.ham {
+		display: none;
+	}
+	.nav-desk {
+		display: flex;
+		color: #fff;
+		font-size: 1.6rem;
+		align-items: center;
+		li {
+			&:not(:last-of-type) {
+				margin-right: 4rem;
+			}
+		}
+	}
+	#explore .images-showcase {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2rem;
+		.image {
+			grid-column: span 1;
+			margin: 0 !important;
+			&:first-of-type {
+				grid-column: 1/3;
+			}
+		}
+	}
+	#featured-boats .images-showcase {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+		.image {
+			margin-bottom: 0 !important;
+		}
+	}
+	footer .footer-items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		align-items: center;
+		grid-gap: 2rem;
+	}
+}
