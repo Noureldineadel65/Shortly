@@ -58,6 +58,7 @@ button::-moz-focus-inner {
 // Styling navigation
 nav {
 	padding: 2rem 0;
+	transition: all 0.3s;
 	img {
 		width: 10rem;
 	}
@@ -72,6 +73,11 @@ nav {
 	#menu {
 		width: 2.5rem;
 	}
+	height: 8rem;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
 }
 // Grid System
 .row {
@@ -86,6 +92,8 @@ nav {
 	height: 100%;
 	padding: 3rem 0;
 	padding-bottom: 8rem;
+	margin-top: 8rem;
+
 	h1 {
 		font-size: 3.7rem;
 		line-height: 40px;
@@ -188,7 +196,9 @@ p {
 		position: relative;
 		height: 100%;
 		padding: 2rem;
+		box-shadow: 1px 1px 43px -15px rgba(0, 0, 0, 0.363);
 		border-radius: 8px;
+		width: 100%;
 	}
 	.card-image {
 		background-color: hsl(260, 8%, 14%);
@@ -258,6 +268,25 @@ footer {
 				margin-right: 2rem;
 			}
 		}
+	}
+}
+// fixed nav
+nav.fixed {
+	background-color: rgba(255, 255, 255, 0.952);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	box-shadow: 1px 1px 43px -25px rgba(0, 0, 0, 0.75);
+	animation: down 0.3s;
+}
+@keyframes down {
+	0% {
+		transform: translateY(-20rem);
+	}
+	100% {
+		transform: translateY(0rem);
 	}
 }
 @import "media";
