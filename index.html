@@ -28,157 +28,188 @@
 
 <body>
 
-  <nav>
-    <div class="container">
-      <ul>
-        <li>
-          <img src="./dist/images/logo.svg" alt="logo">
-        </li>
-        <li class="desk-navigation">
-          <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </li>
-        <li class="desk-navigation">
-          <ul>
-            <li><button class="btn transparent">Login</button></li>
-            <li><button>Sign Up</button></li>
-          </ul>
-        </li>
-        <li class="mobile-nav">
-          <a href="#">
-            <img src="./dist/images/menu.svg" id="menu">
-          </a>
-        </li>
-      </ul>
-    </div>
+  <nav class="mob">
+    <ul>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Login</a></li>
+      <li>
+        <button class="btn">Sign Up</button>
+      </li>
+    </ul>
   </nav>
-  <header class="hero">
-    <div class="container">
-      <div class="row cols-2">
-        <div class="col">
-          <h1>More than just shorter links</h1>
-          <p>Build your brand’s recognition and get detailed insights
-            on how your links are performing.</p>
-          <button class="btn">Get Started</button>
-        </div>
-        <div class="col hero-img">
-          <img src="./dist/images/illustration-working.svg" alt="working">
-        </div>
-      </div>
-    </div>
 
-  </header>
-  <section class="shorten">
-    <div class="container">
-      <div class="box">
-        <input type="text" placeholder="Shorten a link here...">
-        <button class="btn square">Shorten it!</button>
+  <div class="content">
+    <nav class="desk">
+      <div class="container">
+        <ul>
+          <li>
+            <img src="./dist/images/logo.svg" alt="logo">
+          </li>
+          <li class="desk-navigation">
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </li>
+          <li class="desk-navigation">
+            <ul>
+              <li><a>Login</a></li>
+              <li><button class="btn">Sign Up</button></li>
+            </ul>
+          </li>
+          <li class="mobile-nav">
+            <a href="#">
+              <img src="./dist/images/menu.svg" id="menu" class="mobile-nav-link">
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
-  <section class="statistics">
-    <div class="container">
-      <h2>Advanced Statistics</h2>
-      <p>Track how your links are performing across the web with our
-        advanced statistics dashboard.</p>
-      <div class="row cols-3 cards">
-        <div class="cyan-line"></div>
-        <div class="col first">
-          <div class="card">
-            <div class="card-image">
-              <img src="./dist/images/icon-brand-recognition.svg">
-            </div>
-            <div class="card-title">
-              Brand Recognition
-            </div>
-            <p class="card-about">
-              Boost your brand recognition with each click. Generic links don’t
-              mean a thing. Branded links help instil confidence in your content.
-            </p>
+    </nav>
+    <header class="hero">
+      <div class="container">
+        <div class="row cols-2">
+          <div class="col">
+            <h1>More than just shorter links</h1>
+            <p>Build your brand’s recognition and get detailed insights
+              on how your links are performing.</p>
+            <button class="btn">Get Started</button>
           </div>
-        </div>
-        <div class="col">
-          <div class="card second">
-            <div class="card-image">
-              <img src="./dist/images/icon-detailed-records.svg">
-            </div>
-            <div class="card-title">
-              Detailed Records
-            </div>
-            <p class="card-about">
-              Gain insights into who is clicking your links. Knowing when and where
-              people engage with your content helps inform better decisions.
-            </p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card third">
-            <div class="card-image">
-              <img src="./dist/images/icon-fully-customizable.svg">
-            </div>
-            <div class="card-title">
-              Fully Customizable
-            </div>
-            <p class="card-about">
-              Improve brand awareness and content discoverability through customizable
-              links, supercharging audience engagement.
-            </p>
+          <div class="col hero-img">
+            <img src="./dist/images/illustration-working.svg" alt="working">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="boost">
-    <div class="container">
-      <h2>Boost your links today</h2>
-      <button class="btn">Get Started</button>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="row cols-5">
-        <div class="col">
-          <img src="./dist/images/logo-white.svg" alt="logo">
-        </div>
-        <div class="col">
-          <div class="ul-title">Features</div>
-          <ul>
-            <li><a href="#">Link Shortening</a></li>
-            <li><a href="#">Branded Links</a></li>
-            <li><a href="#">Analytics</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <div class="ul-title">Resources</div>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Developers</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <div class="ul-title">Company</div>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <div class="logos">
-            <img src="./dist/images/icon-facebook.svg" alt="facebook">
-            <img src="./dist/images/icon-twitter.svg" alt="twitter">
-            <img src="./dist/images/icon-pinterest.svg" alt="pinterest">
-            <img src="./dist/images/icon-instagram.svg" alt="instagram">
+
+    </header>
+    <section class="shorten">
+      <div class="container">
+        <div class="shorten-form">
+          <div class="box">
+            <input type="text" placeholder="Shorten a link here..." id="shorten-input">
+            <div class="error-message">Please add a valid link</div>
+            <button class="btn square" id="shorten-button">Shorten it!</button>
+          </div>
+          <div class="shortened-links">
+            <!-- <div class="shortened">
+              <a href="#" class="link">https://freecoursesite.com</a>
+              <a href="#" class="shortened-link">https://rel.ink/67gn48</a>
+              <button class="btn square">Copy</button>
+            </div> -->
+            <!-- <div class="shortened">
+              <a href="#" class="link">https://freecoursesite.com</a>
+              <a href="#" class="shortened-link">https://rel.ink/67gn48</a>
+              <button class="btn square">Copy</button>
+            </div> -->
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
+    <section class="statistics">
+      <div class="container">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our
+          advanced statistics dashboard.</p>
+        <div class="row cols-3 cards">
+          <div class="cyan-line"></div>
+          <div class="col first">
+            <div class="card">
+              <div class="card-image">
+                <img src="./dist/images/icon-brand-recognition.svg">
+              </div>
+              <div class="card-title">
+                Brand Recognition
+              </div>
+              <p class="card-about">
+                Boost your brand recognition with each click. Generic links don’t
+                mean a thing. Branded links help instil confidence in your content.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card second">
+              <div class="card-image">
+                <img src="./dist/images/icon-detailed-records.svg">
+              </div>
+              <div class="card-title">
+                Detailed Records
+              </div>
+              <p class="card-about">
+                Gain insights into who is clicking your links. Knowing when and where
+                people engage with your content helps inform better decisions.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card third">
+              <div class="card-image">
+                <img src="./dist/images/icon-fully-customizable.svg">
+              </div>
+              <div class="card-title">
+                Fully Customizable
+              </div>
+              <p class="card-about">
+                Improve brand awareness and content discoverability through customizable
+                links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="boost">
+      <div class="container">
+        <h2>Boost your links today</h2>
+        <button class="btn">Get Started</button>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row cols-5">
+          <div class="col">
+            <img src="./dist/images/logo-white.svg" alt="logo">
+          </div>
+          <div class="col">
+            <div class="ul-title">Features</div>
+            <ul>
+              <li><a href="#">Link Shortening</a></li>
+              <li><a href="#">Branded Links</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="ul-title">Resources</div>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="ul-title">Company</div>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="logos">
+              <img src="./dist/images/icon-facebook.svg" alt="facebook">
+              <img src="./dist/images/icon-twitter.svg" alt="twitter">
+              <img src="./dist/images/icon-pinterest.svg" alt="pinterest">
+              <img src="./dist/images/icon-instagram.svg" alt="instagram">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
