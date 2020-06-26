@@ -171,13 +171,12 @@ section {
 }
 // Styling shorten
 .shorten {
-	position: relative;
-
+	height: 10rem;
 	.shorten-form {
-		position: absolute;
+		position: relative;
 		top: -100%;
 		left: 50%;
-		width: 80%;
+		// width: 80%;
 
 		transform: translateX(-50%);
 	}
@@ -277,7 +276,7 @@ p {
 // styling statistics
 .statistics {
 	background-color: hsla(260, 8%, 14%, 0.048);
-	padding-top: 10%;
+	padding-top: 6%;
 	padding-bottom: 8rem;
 	.row {
 		margin-top: 8rem;
@@ -358,6 +357,7 @@ footer {
 		color: #fff;
 		font-size: 1.2rem;
 		text-align: center;
+		margin-bottom: 0.8rem;
 	}
 	.row {
 		grid-row-gap: 4rem;
@@ -366,10 +366,22 @@ footer {
 		img {
 			display: inline-block;
 			cursor: pointer;
+			transition: filter 0.1s;
 			&:not(:last-of-type) {
 				margin-right: 2rem;
 			}
+			&:hover {
+				filter: invert(0.4) sepia(1) saturate(16) hue-rotate(165.6deg)
+					brightness(1.2);
+			}
 		}
+	}
+	a {
+		transition: all 0.3s;
+	}
+	a:hover,
+	a:active {
+		color: hsl(180, 66%, 49%);
 	}
 }
 // fixed nav
@@ -404,6 +416,7 @@ nav.fixed {
 	position: fixed;
 	top: 10rem;
 	left: 50%;
+	opacity: 0;
 	transform: translateX(-50%) scaleY(0);
 	transform-origin: top;
 	border-radius: 10px;
@@ -430,7 +443,9 @@ nav.fixed {
 	}
 	&.open {
 		transform: translateX(-50%) scaleY(1);
+		opacity: 1;
 	}
+
 	z-index: 12;
 }
 @import "media";
