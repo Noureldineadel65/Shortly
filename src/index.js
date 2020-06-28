@@ -37,14 +37,20 @@ function removeError() {
 function addLink(value) {
 	// https://rel.ink/67gn48
 	removeError();
-	const link = `https://rel.ink/${makeid(Math.floor(Math.random() * 7 + 1))}`;
-	const html = `<div class="shortened">
+	input.value = "";
+	button.innerHTML = `<img src="./dist/images/rolling.svg" class="loading"/>`;
+	setTimeout(() => {
+		const link = `https://rel.ink/${makeid(
+			Math.floor(Math.random() * 7 + 1)
+		)}`;
+		button.innerHTML = `Shorten it!`;
+		const html = `<div class="shortened">
 	<a href="#" class="link">${value}</a>
 	<a href="#" class="shortened-link">${link}</a>
 	<button class="btn square copy">Copy</button>
   </div>`;
-	document.querySelector(".shortened-links").innerHTML += html;
-	input.value = "";
+		document.querySelector(".shortened-links").innerHTML += html;
+	}, 1200);
 }
 function addError() {
 	input.classList.add("error");
@@ -58,12 +64,38 @@ button.addEventListener("click", function () {
 		addError();
 	}
 });
+function copyToClipboard(text) {
+	if (window.clipboardData && window.clipboardData.setData) {
+		// Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+		return clipboardData.setData("Text", text);
+	} else if (
+		document.queryCommandSupported &&
+		document.queryCommandSupported("copy")
+	) {
+		var textarea = document.createElement("textarea");
+		textarea.textContent = text;
+		textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in Microsoft Edge.
+		document.body.appendChild(textarea);
+		textarea.select();
+		try {
+			return document.execCommand("copy"); // Security exception may be thrown by some browsers.
+		} catch (ex) {
+			console.warn("Copy to clipboard failed.", ex);
+			return false;
+		} finally {
+			document.body.removeChild(textarea);
+		}
+	}
+}
 document
 	.querySelector(".shortened-links")
 	.addEventListener("click", function (e) {
 		if (e.target.classList.contains("copy")) {
 			const bg = getComputedStyle(e.target).backgroundColor;
-
+			copyToClipboard(
+				e.target.parentElement.querySelector(".shortened-link")
+					.innerHTML
+			);
 			e.target.innerHTML = "Copied!";
 			e.target.style.backgroundColor = "#222";
 			setTimeout(() => {

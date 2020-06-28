@@ -66,6 +66,9 @@
 			width: 15%;
 		}
 	}
+	.mob {
+		display: none;
+	}
 }
 @media only screen and (min-width: 1100px) {
 	html,
@@ -154,5 +157,8 @@
 	}
 	footer .row {
 		grid-template-columns: repeat(5, 1fr);
+	}
+	.loading {
+		width: 3rem;
 	}
 }
