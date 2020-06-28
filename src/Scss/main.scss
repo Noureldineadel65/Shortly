@@ -118,7 +118,7 @@ nav {
 .hero {
 	height: 100%;
 	padding: 3rem 0;
-	padding-bottom: 8rem;
+	padding-bottom: 19rem;
 	margin-top: 8rem;
 
 	h1 {
@@ -167,25 +167,17 @@ nav {
 }
 // section padding
 section {
-	padding: 2rem 0;
+	// padding: 2rem 0;
 }
 // Styling shorten
 .shorten {
-	height: 10rem;
-	.shorten-form {
-		position: relative;
-		top: -100%;
-		left: 50%;
-		// width: 80%;
-
-		transform: translateX(-50%);
-	}
+	background-color: hsla(260, 8%, 14%, 0.048);
+	position: relative;
+	// height: 15rem;
 	.shortened-links {
-		margin-top: 2rem;
+		transform: translateY(-5rem);
 	}
 	.box {
-		// bottom: -152%;
-
 		height: 16rem;
 		padding: 2rem 5rem;
 		background: url(../images/bg-shorten-mobile.svg), hsl(255, 11%, 22%);
@@ -196,8 +188,9 @@ section {
 		flex-direction: column;
 		justify-content: center;
 		border-radius: 5px;
-		width: 100%;
-		position: relative;
+		transform: translateY(-50%);
+		z-index: 7;
+		// top: -50%;
 	}
 	input {
 		border-radius: 5px;
@@ -276,8 +269,8 @@ p {
 // styling statistics
 .statistics {
 	background-color: hsla(260, 8%, 14%, 0.048);
-	padding-top: 6%;
 	padding-bottom: 8rem;
+	padding-top: -14rem;
 	.row {
 		margin-top: 8rem;
 		position: relative;
@@ -447,5 +440,13 @@ nav.fixed {
 	}
 
 	z-index: 12;
+}
+::selection {
+	background: hsl(180, 66%, 49%); /* WebKit/Blink Browsers */
+	color: #fff;
+}
+::-moz-selection {
+	background: hsl(180, 66%, 49%); /* Gecko Browsers */
+	color: #fff;
 }
 @import "media";

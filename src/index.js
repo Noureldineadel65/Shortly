@@ -33,7 +33,7 @@ function removeError() {
 	input.classList.remove("error");
 	document.querySelector(".error-message").style.display = "none";
 }
-let links = 1;
+
 function addLink(value) {
 	// https://rel.ink/67gn48
 	removeError();
@@ -41,12 +41,8 @@ function addLink(value) {
 	const html = `<div class="shortened">
 	<a href="#" class="link">${value}</a>
 	<a href="#" class="shortened-link">${link}</a>
-	<button class="btn square">Copy</button>
+	<button class="btn square copy">Copy</button>
   </div>`;
-	links++;
-	document.querySelector(".statistics").style.paddingTop = `${
-		links * 10 + links * 1.1
-	}%`;
 	document.querySelector(".shortened-links").innerHTML += html;
 	input.value = "";
 }
@@ -62,3 +58,17 @@ button.addEventListener("click", function () {
 		addError();
 	}
 });
+document
+	.querySelector(".shortened-links")
+	.addEventListener("click", function (e) {
+		if (e.target.classList.contains("copy")) {
+			const bg = getComputedStyle(e.target).backgroundColor;
+
+			e.target.innerHTML = "Copied!";
+			e.target.style.backgroundColor = "#222";
+			setTimeout(() => {
+				e.target.style.backgroundColor = "hsl(180, 66%, 49%)";
+				e.target.innerHTML = "Copy";
+			}, 1500);
+		}
+	});
